@@ -80,9 +80,12 @@ public class Alfabeto {
 	}
 
 	/**
+	 * Permite saber si el simbolo pasado como parámetro se encuentro en el
+	 * alfabeto.
 	 * 
 	 * @param simbolo
-	 * @return true en caso que el simbolo se encuentre en el alfabeto
+	 *            Simbolo a ser buscado.
+	 * @return true en caso que el simbolo se encuentre en el alfabeto.
 	 */
 	public boolean hasSimbolo(final Simbolo simbolo) {
 		return this.simbolos.contains(simbolo);
