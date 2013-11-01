@@ -69,6 +69,8 @@ public class EstadoAFD extends Estado {
 
 	@Override
 	public boolean equals(final Object obj) {
+		// TODO para ser iguales tambien deben tener el mismo conjunto de
+		// estados AFN.
 		if (this == obj) {
 			return true;
 		}
