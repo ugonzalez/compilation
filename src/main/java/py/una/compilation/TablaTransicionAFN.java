@@ -93,9 +93,12 @@ public class TablaTransicionAFN {
 			final EstadoAFN estadoSiguiente) {
 		final FilaAFN filaAFN = this.getFila(estado);
 		final ColumnaAFN columnaAFN = this.getColumna(filaAFN, simbolo);
-		// TODO se debería verificar que el estadoSiguiente ya no se encuentre
-		// en el conjunto de EstadosSiguientes
-		columnaAFN.getEstadosSiguientes().add(estadoSiguiente);
+
+		if (columnaAFN.getEstadosSiguientes().contains(estadoSiguiente)) {
+			return;
+		} else {
+			columnaAFN.getEstadosSiguientes().add(estadoSiguiente);
+		}
 
 		if (simbolo.equals(new Simbolo("#"))) {
 			// Los estados siguientes del estadoSiguiente deben formar parte del
