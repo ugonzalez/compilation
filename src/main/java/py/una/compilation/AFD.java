@@ -33,8 +33,9 @@ public class AFD {
 		this.estadoInicial = estadoInicial;
 		this.alfabeto = alfabeto;
 		this.estados = new ArrayList<EstadoAFD>();
-		this.addNuevoEstadoAFD(this.estadoInicial);
 		this.tablaTransicion = new TablaTransicionAFD();
+		this.addNuevoEstadoAFD(this.estadoInicial);
+
 	}
 
 	/**
@@ -44,6 +45,7 @@ public class AFD {
 	 *            Nuevo estado del AFD.
 	 */
 	public void addNuevoEstadoAFD(final EstadoAFD estadoAFD) {
+		// TODO debe asegurarse que la tabla de transicion no sea null
 		this.estados.add(estadoAFD);
 		this.tablaTransicion.addNuevaFila(new FilaAFD(estadoAFD,
 				new ArrayList<ColumnaAFD>()));
